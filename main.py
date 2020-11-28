@@ -25,11 +25,11 @@ class logic:
 
 
     def getQuote(self, message):
-        print("[INFO][getQuote] got the message: {}".format(message))
-        print("[INFO][getQuote] have the authors: {}".format(self.authors))
+        #print("[INFO][getQuote] got the message: {}".format(message))
+        #print("[INFO][getQuote] have the authors: {}".format(self.authors))
 
         for author in self.authors:
-            if author.hasName(message):
+            if author.isName(message):
                 quote = author.ranQuote()
                 print("[INFO][getQuote] in MESSAGE: {} found the name of {}; going to return quote: {}".format(message, author.ranName, quote))
                 return quote

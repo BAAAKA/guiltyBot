@@ -8,7 +8,13 @@ class author:
 
     def hasName(self, text):
         for name in self.names:
-            if name in text:
+            if name.lower() in text.lower():
+                return True
+        return False
+
+    def isName(self, text):
+        for name in self.names:
+            if name.lower() == text.lower():
                 return True
         return False
 
