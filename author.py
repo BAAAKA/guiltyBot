@@ -16,6 +16,16 @@ class author:
         x = random.randint(0, len(self.quotes) - 1)
         return self.quotes[x]
 
+    def ranName(self):
+        x = random.randint(0, len(self.names) - 1)
+        return self.names[x]
+
+    def getNames(self):
+        return self.names
+
+    def getQuotes(self):
+        return self.quotes
+
 
 GabeNames = ["gabe"]
 GabeText = []
