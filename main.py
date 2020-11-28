@@ -3,6 +3,7 @@ from author import author
 #text_file = open("token.txt", "r")
 #token = text_file.readlines()[0]
 
+
 txtFilePath = os.getcwd() + "\\authors"
 print(txtFilePath)
 
