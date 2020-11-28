@@ -1,5 +1,6 @@
 import os
 from author import author
+from pathlib import Path
 
 class logic:
     def __init__(self):
@@ -16,7 +17,7 @@ class logic:
             for quote in author.quotes:
                 print(quote)
         """
-        txtFilePath = os.getcwd() + "\\authors"
+        txtFilePath = Path(os.getcwd() + "/authors")
         print("[INFO] FILEPATH: {}".format(txtFilePath))
 
         print("[INFO] CREATING AUTHORS")
@@ -31,7 +32,7 @@ class logic:
         for author in self.authors:
             if author.isName(message):
                 quote = author.ranQuote()
-                print("[INFO][getQuote] in MESSAGE: {} found the name of {}; going to return quote: {}".format(message, author.ranName, quote))
+                print("[INFO][getQuote] in MESSAGE: {} found the name of {}; going to return quote: {}".format(message, author.ranName(), quote))
                 return quote
         return None
 
@@ -46,7 +47,7 @@ class logic:
         return filePaths
 
     def readFile(self, file, txtFilePath):
-        filepath = txtFilePath + "\\" + file
+        filepath = Path("{}/{}".format(txtFilePath, file))
         text_file = open(filepath, "r")
         lines = text_file.readlines()
         print("[INFO][readFile] FILEPATH: {} has the CONTENT: {}".format(filepath, lines))
