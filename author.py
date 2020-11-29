@@ -32,10 +32,3 @@ class author:
     def getQuotes(self):
         return self.quotes
 
-
-GabeNames = ["gabe"]
-GabeText = []
-GabeText.append("Yes, front liner, every single character")
-GabeText.append("Really? Martials, every single character?")
-
-gabe = author(GabeNames, GabeText)
